@@ -1,6 +1,11 @@
 # TuyaLink MQTT Protocol Java Demo
 
-Tuyalink-demo is written in Java and supports the Tuya-defined things data model,aiming to help developers to connect their proprietary hardware to the Tuya Cloud.
+TuyaLink demo is an example code of the Java version of the TuyaLink mqtt standard protocol, which is used to simulate the device connecting to the Tuya cloud through the TuyaLink protocol, and supports the reporting and distribution of the properties, actions, and events of the Tuya thing model.
+
+
+TuyaLink mqtt standard protocol provides many built-in access protocol specifications out of the box, covering the business scenarios that most developers need to use, such as device model, submission and distribution, topology relationship, Ota, timing, remote configuration and distribution, file transfer, NTP, etc.
+
+For more details, please visit the [official documents](https://developer.tuya.com/en/docs/iot/device-connection?id=Kb46bqq71kwtd)
 
 ## Procedure
 
@@ -23,12 +28,13 @@ You need to get the ProductID, DeviceID and DeviceSecret information you got on 
  String deviceSecret = "ffad8e34m1ae8c717";
 ```
 Tips: the above identification example values are only for example, please do not use them directly.
+![img_3.png](img_3.png)
 
 ### Step 4: Run it
 At this point, the preparations are completed. Right click the TuyaMQTT3ClientDemo file and click Run to run the code.
+
 You can see that the console attribute has been reported successfully.
-```text
-publish topic:xxx
-publish content:{}
-deliveryComplete---------true
-```
+![img_1.png](img_1.png)
+
+At this point, switch to the device debugging page of the IOT platform, and you can see the data log reported by the device.
+![img_2.png](img_2.png)
