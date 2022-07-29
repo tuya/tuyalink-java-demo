@@ -28,13 +28,13 @@ You need to get the ProductID, DeviceID and DeviceSecret information you got on 
  String deviceSecret = "ffad8e34m1ae8c717";
 ```
 Tips: the above identification example values are only for example, please do not use them directly.
-![img_3.png](img_3.png)
+![img_4.png](img_4.png)
 
 ### Step 4: Run it
 At this point, the preparations are completed. Right click the TuyaMQTT3ClientDemo file and click Run to run the code.
 
 You can see that the console attribute has been reported successfully.
-![img_1.png](img_1.png)
+![img_6.png](img_6.png)
 
 At this point, switch to the device debugging page of the IOT platform, and you can see the data log reported by the device.
-![img_2.png](img_2.png)
+![img_5.png](img_5.png)
