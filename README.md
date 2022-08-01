@@ -1,40 +1,48 @@
-# TuyaLink MQTT Protocol Java Demo
+# TuyaLink MQTT Protocol Demo For Java
 
-TuyaLink demo is an example code of the Java version of the TuyaLink mqtt standard protocol, which is used to simulate the device connecting to the Tuya cloud through the TuyaLink protocol, and supports the reporting and distribution of the properties, actions, and events of the Tuya thing model.
+This demo shows how to connect a device to the [Tuya IoT Development Platform](https://iot.tuya.com/) through the TuyaLink MQTT protocol for Java. It supports bidirectional communication of data defined by Tuya's things data model in terms of property, action, and event.
 
+TuyaLink MQTT protocol provides various turnkey protocol specifications to help you quickly implement the required features, including device models, sending and receiving data to and from cloud, topology, OTA update, timer, remote configuration, file transfer, and Network Time Protocol (NTP).
 
-TuyaLink mqtt standard protocol provides many built-in access protocol specifications out of the box, covering the business scenarios that most developers need to use, such as device model, submission and distribution, topology relationship, Ota, timing, remote configuration and distribution, file transfer, NTP, etc.
-
-For more details, please visit the [official documents](https://developer.tuya.com/en/docs/iot/device-connection?id=Kb46bqq71kwtd)
+For more information, see [TuyaLink documentation](https://developer.tuya.com/en/docs/iot/device-connection?id=Kb46bqq71kwtd).
 
 ## Procedure
 
 ### Step 1: Download the project
-The following describes the structure of the SDK directory:
-+ Core example code: tuyamqtt3clientdemo
-+ Sign package: store TuyaLink mqtt connection related signature logic
-+ Listener package: store mqtt messages listener
-+ Resources: store certificates
 
-### Step 2: Import project to IDEA
-The downloaded sample code can be decompressed and imported into IntelliJ IDEA
+The structure of the SDK directory:
+
++ Sample code: `TuyaMQTT3ClientDemo`
++ Sign package: Includes the signature logic for MQTT connection.
++ Listener: Includes the MQTT listener.
++ Resources: Includes the certificate.
+
+### Step 2: Import project to IntelliJ IDEA
+
+Unzip the downloaded file and import it to IntelliJ IDEA. Alternatively, you can directly clone the GitHub project to IntelliJ IDEA.
 
 ### Step 3: Change device configuration
-You need to get the ProductID, DeviceID and DeviceSecret information you got on the Tuya IOT platform before,You must change it.
+
+Go to the [Tuya IoT Development Platform](https://iot.tuya.com/) and get the `ProductID`, `DeviceID`, and `DeviceSecret` information.  Make sure to replace the values of these three parameters with your own, and do not modify other code.
+
 ```java
  // TuyaLink device configuration is as follows, you must change it
  String productId = "dsadusiau";
  String deviceId = "6cc87b393436fb754i2xb";
  String deviceSecret = "ffad8e34m1ae8c717";
 ```
-Tips: the above identification example values are only for example, please do not use them directly.
+The values in the above code snippet are for demonstration only. Replace them with your own.
+
 ![img_4.png](img_4.png)
 
-### Step 4: Run it
-At this point, the preparations are completed. Right click the TuyaMQTT3ClientDemo file and click Run to run the code.
+### Step 4: Run code
 
-You can see that the console attribute has been reported successfully.
+Right-click the `TuyaMQTT3ClientDemo` file and choose **Run** to run the code.
+
+The output window shows successful data reporting to the cloud.
+
 ![img_6.png](img_6.png)
 
-At this point, switch to the device debugging page of the IOT platform, and you can see the data log reported by the device.
-![img_5.png](img_5.png)
+Navigate to **Device Debugging** on the Tuya IoT Development Platform and check the data reported from the device.
+
+![img_7.png](img_7.png)
